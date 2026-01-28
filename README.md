@@ -1,41 +1,40 @@
-# 🏠 Housing Price Prediction – Machine Learning Web App
+# 🏠 House Price Prediction – Machine Learning Web App
 
-An **end-to-end Machine Learning project** that predicts house prices using a trained **scikit-learn pipeline** and an interactive **Streamlit web application**.
+An end-to-end **Machine Learning web application** that predicts house prices using a trained **scikit-learn pipeline**, deployed with **Streamlit**.
 
-This project focuses on **correct ML engineering practices**:
-- feature-consistent inference,
-- preprocessing with `ColumnTransformer`,
-- model evaluation & explainability,
-- and clean deployment without unnecessary backend complexity.
+🔗 **Live App:**  
+https://house-price-prediction-ml-odel.streamlit.app
 
 ---
 
 ## 🚀 Project Overview
 
-**Goal:** Predict house prices based on property features such as area, rooms, amenities, and furnishing status.
-
 - **Problem Type:** Supervised Regression  
 - **Target Variable:** `price`  
 - **Interface:** Streamlit Web App  
-- **Deployment Style:** Frontend + ML inference in one app  
+- **Deployment:** Streamlit Community Cloud  
+
+The project demonstrates correct **ML engineering practices** including feature-consistent inference, pipelines, evaluation metrics, and interactive visualization.
 
 ---
 
 ## 🧠 Machine Learning Details
 
-### 📊 Dataset
+### Dataset
 - Real-world housing dataset (`Housing.csv`)
-- Combination of numerical & categorical features
+- Mix of numerical and categorical features
 - No missing values
 
-### 🔢 Numerical Features
+### Features
+
+**Numerical**
 - `area`
 - `bedrooms`
 - `bathrooms`
 - `stories`
 - `parking`
 
-### 🔤 Categorical Features
+**Categorical**
 - `mainroad`
 - `guestroom`
 - `basement`
@@ -48,48 +47,33 @@ This project focuses on **correct ML engineering practices**:
 
 ## ⚙️ Model Architecture
 
-- **Pipeline-based ML system (scikit-learn)**
-- **Preprocessing** using `ColumnTransformer`
+- **Pipeline-based model (scikit-learn)**
+- Preprocessing with `ColumnTransformer`
   - `StandardScaler` for numerical features
   - `OneHotEncoder` for categorical features
 - **Model:** Ridge Regression
 - **Serialization:** `joblib`
 
-Using a pipeline ensures:
-- No data leakage
-- Identical preprocessing during training & inference
-- Production-ready inference logic
+Using a pipeline ensures the same preprocessing is applied during both training and inference.
 
 ---
 
-## 📈 Model Evaluation
-
-The app displays real performance metrics calculated from the dataset:
+## 📈 Model Evaluation (Displayed in App)
 
 - **R² Score**
 - **RMSE (Root Mean Squared Error)**
 
-These metrics help users and reviewers understand model quality.
+Metrics are calculated using the dataset to provide transparency about model performance.
 
 ---
 
-## 📊 Data Visualization
+## 📊 App Features
 
-The Streamlit app includes:
-- **Price distribution histogram** of the dataset
-- Interactive UI to understand prediction context
-
----
-
-## 🖥️ Streamlit Web Application
-
-### UI Features
-- Sliders for numerical inputs
-- Dropdowns for categorical features
-- Organized layout using sections & columns
+- Interactive sliders & dropdowns for inputs
 - Real-time house price prediction
-- Model performance metrics (R², RMSE)
-- Dataset price distribution chart
+- Price distribution histogram of dataset
+- Model performance metrics (R² & RMSE)
+- Clean, responsive UI built with Streamlit
 
 ---
 
@@ -98,15 +82,15 @@ The Streamlit app includes:
 House_Price_Prediction/
 │
 ├── streamlit_app/
-│ ├── app.py # Streamlit application
+│ ├── app.py  # Streamlit application
 │ ├── model.pkl # Trained ML pipeline
 │ └── requirements.txt
 │
 ├── ml/
 │ ├── data/
 │ │ └── Housing.csv
-│ ├── train.py # Model training script
-│ └── evaluate.py
+│ ├── train.py # Offline model training
+│ └── evaluate.py # Offline evaluation
 │
 ├── notebooks/
 │ └── eda.ipynb # Exploratory Data Analysis
@@ -116,10 +100,32 @@ House_Price_Prediction/
 
 ---
 
-## ▶️ Run the Project Locally
+## ▶️ Run Locally
 
-### 1️⃣ Create & activate environment
 ```bash
-python -m venv ml_env
-ml_env\Scripts\activate
+pip install -r streamlit_app/requirements.txt
+streamlit run streamlit_app/app.py
 ```
+
+## 🧠 Key Learnings
+* Importance of feature schema consistency
+
+* Proper use of ML pipelines for inference
+
+* Handling categorical data correctly
+
+* Evaluating regression models using RMSE & R²
+
+* Deploying ML apps using Streamlit
+
+---
+
+👤 Author
+**Vishvas Parmar**
+Machine Learning & Data Science Enthusiast
+
+---
+
+⭐ If you like this project, consider giving it a star!
+
+---
