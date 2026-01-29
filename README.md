@@ -120,12 +120,12 @@ streamlit run streamlit_app/app.py
 
 ---
 
-👤 Author
+## 👤 Author
 **Vishvas Parmar**
+
 Machine Learning & Data Science Enthusiast
 
 ---
 
 ⭐ If you like this project, consider giving it a star!
 
----
