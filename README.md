@@ -78,7 +78,7 @@ Metrics are calculated using the dataset to provide transparency about model per
 ---
 
 ## 📂 Project Structure
-
+```
 House_Price_Prediction/
 │
 ├── streamlit_app/
@@ -96,7 +96,7 @@ House_Price_Prediction/
 │ └── eda.ipynb # Exploratory Data Analysis
 │
 └── README.md
-
+```
 
 ---
 
